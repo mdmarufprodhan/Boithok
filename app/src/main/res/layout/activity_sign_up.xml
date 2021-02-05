@@ -22,18 +22,20 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/days_one"
-                android:text="Welcome To Virtual Study Platform"
-                android:textColor="@color/black"
-                android:textSize="36sp" />
+                android:gravity="center"
+                android:text="Create New Account"
+                android:textColor="@color/purple_700"
+                android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/emailBox2"
+                android:id="@+id/nameBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/name"
+                android:drawableLeft="@drawable/email"
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:hint="Name"
@@ -67,20 +69,20 @@
                 android:padding="10dp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/signUpBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_style"
-                android:text="Login" />
+                android:text="CREATE AN ACCOUNT" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/createBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_style2"
-                android:text="CREARE AN ACCOUNT" />
+                android:text="ALREADY HAVE AN ACCOUNT?" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
