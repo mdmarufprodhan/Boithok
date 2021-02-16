@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.logging.Logger;
+
 public class LoginActivity extends AppCompatActivity {
     EditText emailBox , passwordBox;
     Button loginBtn , signupBtn;
@@ -50,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            startActivity(new Intent(LoginActivity.this,DashboardActivity.class));
                             Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(LoginActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
