@@ -3,6 +3,7 @@ package com.example.virtualstudyapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,11 +23,14 @@ public class LoginActivity extends AppCompatActivity {
     Button loginBtn , signupBtn;
 
  FirebaseAuth auth;
+
+ ProgressDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Please wait...");
         auth = FirebaseAuth.getInstance();
 
         emailBox = findViewById(R.id.emailBox);
@@ -44,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.show();
                 String email, pasword;
                 email = emailBox.getText().toString();
                 pasword = passwordBox.getText().toString();
@@ -51,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 auth.signInWithEmailAndPassword(email, pasword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        dialog.dismiss();
                         if (task.isSuccessful()) {
                             startActivity(new Intent(LoginActivity.this,DashboardActivity.class));
                             Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
