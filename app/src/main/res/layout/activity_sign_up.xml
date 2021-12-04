@@ -25,9 +25,9 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/days_one"
                 android:gravity="center"
-                android:text="Create New Account"
+                android:text="Register New Account"
                 android:textColor="@color/purple_700"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/nameBox"
@@ -73,15 +73,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/button_style"
-                android:text="CREATE AN ACCOUNT" />
+                android:background="@color/purple_500"
+                android:text="CREATE AN ACCOUNT"
+                app:iconTint="#3F51B5" />
 
             <Button
                 android:id="@+id/createBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/button_style2"
+                android:background="@color/catalyst_redbox_background"
                 android:text="ALREADY HAVE AN ACCOUNT?" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

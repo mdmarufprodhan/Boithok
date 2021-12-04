@@ -64,7 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
                                       startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
                                     }
                                 });
-                                // Toast.makeText(SignUpActivity.this, "Account created." , Toast.LENGTH_SHORT ).show();
+                                 Toast.makeText(SignUpActivity.this, "Account created." , Toast.LENGTH_SHORT ).show();
 
                             } else {
                                 Toast.makeText(SignUpActivity.this,task.getException() .getLocalizedMessage(), Toast.LENGTH_SHORT ).show();

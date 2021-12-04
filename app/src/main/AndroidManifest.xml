@@ -15,7 +15,8 @@
             android:label="New Account" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login" />
+            android:label="Boithok"
+            />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
