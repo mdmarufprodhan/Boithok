@@ -84,6 +84,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/catalyst_redbox_background"
                 android:text="ALREADY HAVE AN ACCOUNT?" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

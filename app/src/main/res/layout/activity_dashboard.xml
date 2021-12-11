@@ -8,19 +8,6 @@
     app:layout_anchorGravity="center_horizontal"
     tools:context=".DashboardActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F3F3"
-        app:itemIconTint="@color/teal_700"
-        app:itemTextColor="#35428A"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,14 +62,6 @@
                     android:background="@drawable/button_style"
                     android:text="join" />
 
-                <Button
-                    android:id="@+id/shareBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_style2"
-                    android:text="Share" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -21,7 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         FirebaseAuth auth;
         EditText emailBox, passwordBox, nameBox;
-        Button loginBtn, signupBtn;
+        Button loginBtn, signupBtn,  createBtn;
 
        FirebaseFirestore databse;
     @Override
@@ -38,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             loginBtn = findViewById(R.id.signUpBtn);
             signupBtn = findViewById(R.id.signUpBtn);
+            createBtn = findViewById(R.id.createBtn);
 
 
             signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -66,15 +67,21 @@ public class SignUpActivity extends AppCompatActivity {
                                 });
                                  Toast.makeText(SignUpActivity.this, "Account created." , Toast.LENGTH_SHORT ).show();
 
-                            } else {
+                            }
+                            else {
                                 Toast.makeText(SignUpActivity.this,task.getException() .getLocalizedMessage(), Toast.LENGTH_SHORT ).show();
-
-
                             }
                         }
                     });
 
                 }
             });
+
+        createBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
+            }
+        });
         }
     }
